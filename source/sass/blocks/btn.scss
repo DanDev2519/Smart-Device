@@ -1,0 +1,23 @@
+.btn {
+  display: block;
+  padding: 30px 40px;
+
+  @include setFont(12px, $white, 15px, bold);
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+
+  background-color: $light-red;
+  border: 0;
+  cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: $orange;
+  }
+
+  &:active {
+    background-color: $orange;
+  }
+}
