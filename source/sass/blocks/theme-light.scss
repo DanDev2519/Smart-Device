@@ -1,0 +1,29 @@
+.theme-light {
+  background: $white;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $gray;
+  }
+
+  p,
+  a {
+    color: $gray;
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      color: $black;
+    }
+
+    &:active {
+      color: $black;
+      opacity: 0.4;
+    }
+  }
+}

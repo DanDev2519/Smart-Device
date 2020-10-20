@@ -1,6 +1,8 @@
 //Цвета
 $white: white;
 $black: black;
+$dark-blue: #1b2d37;
+$gray: #666666;
 
 // Размеры
 $mobile-width: 320px;
@@ -9,6 +11,10 @@ $tablet-width: 768px;
 $tablet-width-only: 1023px;
 $desktop-width: 1024px;
 $desktop-width-max: 1170px;
+
+//Шрифты
+$ptm: "PT Mono", "Courier New", monospace;
+$rc: "Roboto Condensed", "Arial", sans-serif;
 
 //Медиа выражения
 $mobile: "(min-width: #{$mobile-width})";

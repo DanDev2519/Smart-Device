@@ -9,14 +9,14 @@
 // @import "source/sass/blocks/*.scss";
 //common
 // @import "source/sass/blocks/container.scss";
-// @import "source/sass/blocks/btn.scss";
+@import "source/sass/blocks/btn.scss";
+@import "source/sass/blocks/theme-dark.scss";
+@import "source/sass/blocks/theme-light.scss";
 //header
-// @import "source/sass/blocks/.scss";
-// @import "source/sass/blocks/.scss";
-// @import "source/sass/blocks/.scss";
+@import "source/sass/blocks/page-header.scss";
+@import "source/sass/blocks/main-nav.scss";
+@import "source/sass/blocks/promo.scss";
 //index.html
-// @import "source/sass/blocks/.scss";
-// @import "source/sass/blocks/.scss";
 // @import "source/sass/blocks/.scss";
 // @import "source/sass/blocks/.scss";
 // @import "source/sass/blocks/.scss";

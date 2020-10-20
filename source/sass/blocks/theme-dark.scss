@@ -1,0 +1,29 @@
+.theme-dark {
+  background: $dark-blue;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: $white;
+  }
+
+  p,
+  a {
+    color: $white;
+  }
+
+  a {
+    &:hover,
+    &:focus {
+      color: $white;
+    }
+
+    &:active {
+      color: $white;
+      opacity: 0.4;
+    }
+  }
+}
