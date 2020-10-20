@@ -1,7 +1,7 @@
 {
   "name": "Smart-Device",
   "version": "1.0.0",
-  "description": "Проект Smart-Device",
+  "description": "Project Smart-Device",
   "devDependencies": {
     "@htmlacademy/editorconfig-cli": "1.x",
     "autoprefixer": "9.5.x",
