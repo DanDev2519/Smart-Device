@@ -1,9 +1,14 @@
-.page-header{
+.page-header {
+  @include bgimg(
+    $dark-blue,
+    url("../img/mask group top-desktop@1x.png"),
+    $position: center 0
+  );
+  background-size: cover;
 
-}
-
-.page-header__wrapper {
-
+  @media #{$retina} {
+    background-image: url("../img/mask group top-desktop@2x.png");
+  }
 }
 
 @media #{$tablet-only} {

@@ -1,13 +1,82 @@
 .promo {
+  display: flex;
+  justify-content: space-between;
+  padding: 100px 0 105px;
+  margin: 0 auto;
+  max-width: 1566px;
+  overflow: hidden;
 
+  h1 {
+    margin: 0;
+
+    @include setFont(80px, 94px, bold);
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+  }
+
+  p {
+    position: relative;
+    margin: 26px 0 43px;
+    padding: 0 0 0 97px;
+
+    @include setFont(22px, 34px, normal);
+
+    &::before {
+      @include pseudo();
+      @include size(66px, 2px);
+      top: 17px;
+      left: 3px;
+      background-color: $white;
+    }
+  }
+
+  img {
+    margin: 73px 0 0 0;
+
+    @include size(705px, 515px);
+    @include bgimg(
+      transparent,
+      url("../img/mask group triangles-desktop@1x.png"),
+      $position: bottom 29.7% right 14.6%
+    );
+    background-size: 272.7%;
+
+    @media #{$retina} {
+      background-image: url("../img/mask group triangles-desktop@2x.png");
+    }
+  }
+
+  picture {
+    flex-shrink: 0;
+  }
+}
+
+.promo__wrapper {
+  margin: 131px 15px 0 4.66%;
+  max-width: 773px;
+  min-width: 510px;
 }
 
 .promo__btn {
+  max-width: 407px;
+  margin: 0 0 0 97px;
+  padding: 18px 26px;
 
+  @include setFont(16px, 19px, bold);
+  border-width: 0;
+  background-color: $blue;
 }
 
 .promo__link {
+  width: 20px;
+  height: 100px;
 
+  @include setFont(14px, 16px, normal);
+  font-family: $ptm;
+  opacity: 0.5;
+  transform-origin: left bottom 0;
+  transform: rotate(180deg) translate(-23px, 13px);
+  writing-mode: tb-rl;
 }
 
 @media #{$tablet-only} {
