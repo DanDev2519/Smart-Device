@@ -9,7 +9,7 @@
 }
 
 .main-nav__logo {
-  &img {
+  img {
     @include size(202px, 52px);
   }
 }
@@ -43,9 +43,54 @@
 }
 
 @media #{$tablet-only} {
+  .main-nav {
+    padding: 20px 3.2% 0;
+  }
 
+  .main-nav__list {
+    margin: 0;
+  }
+
+  .main-nav__item {
+    padding: 0 0 0 34px;
+  }
+
+  .main-nav__link {
+    svg {
+      margin-right: 0;
+    }
+
+    span {
+      display: none;
+    }
+
+    &--envelope svg {
+      @include size(25px, 18px);
+    }
+
+    &--phone svg {
+      @include size(24px, 24px);
+      margin-top: -2px;
+    }
+  }
+
+  .main-nav__button {
+    display: none;
+  }
 }
 
 @media #{$mobile-only} {
+  .main-nav {
+    padding: 17px 4.8% 0 5.2%;
+  }
 
+  .main-nav__logo {
+    img {
+      @include size(38px, 38px);
+    }
+  }
+
+  .main-nav__item {
+    padding: 0 0 0 24px;
+  }
 }

@@ -10,10 +10,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
   <link href="css/style.min.css" rel="stylesheet">
-  <link rel="preload" href="fonts/robotocondensed.woff2" as="font">
-  <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font">
-  <link rel="preload" href="fonts/ptmono.woff2" as="font">
-  <link rel="preload" href="fonts/robotomedium.woff2" as="font">
+  <link rel="preload" href="fonts/robotocondensed.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/robotocondensedbold.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/ptmono.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/robotomedium.woff2" as="font" type="font/woff2" crossorigin>
 </head>
 <body>
   <div style="display: none;">
@@ -44,7 +44,7 @@
       </div> -->
       <ul class="main-nav__list">
         <li class="main-nav__item">
-          <a href="mailto:info@sd.ru" class="main-nav__link">
+          <a href="mailto:info@sd.ru" class="main-nav__link main-nav__link--envelope">
             <svg role="img" width="19" height="14">
               <use xlink:href="#icon-envelope"></use>
             </svg>
@@ -52,7 +52,7 @@
           </a>
         </li>
         <li class="main-nav__item">
-          <a href="tel:+74950005252" class="main-nav__link">
+          <a href="tel:+74950005252" class="main-nav__link main-nav__link--phone">
             <svg role="img" width="18" height="18">
               <use xlink:href="#icon-phone-call"></use>
             </svg>

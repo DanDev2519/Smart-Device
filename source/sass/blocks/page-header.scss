@@ -12,9 +12,31 @@
 }
 
 @media #{$tablet-only} {
+  .page-header {
+    @include bgimg(
+      $dark-blue,
+      url("../img/mask group top-tablet@1x.png"),
+      $position: center 0
+    );
+    background-size: cover;
 
+    @media #{$retina} {
+      background-image: url("../img/mask group top-tablet@2x.png");
+    }
+  }
 }
 
 @media #{$mobile-only} {
+  .page-header {
+    @include bgimg(
+      $dark-blue,
+      url("../img/mask group top-mobile@1x.png"),
+      $position: center 0
+    );
+    background-size: cover;
 
+    @media #{$retina} {
+      background-image: url("../img/mask group top-mobile@2x.png");
+    }
+  }
 }
