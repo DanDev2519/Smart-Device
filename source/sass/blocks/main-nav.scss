@@ -1,6 +1,7 @@
 .main-nav {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 
   margin: 0 auto;
   padding: 33px 0 0;
@@ -17,19 +18,21 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  // align-items: center;
 
   @include list(0);
-  margin: 0;
+  margin: 0 0 0 auto;
 }
 
 .main-nav__item {
-  padding: 0 20px;
+  padding: 0 44px;
 }
 
 .main-nav__link {
+  display: flex;
+
   @include setFont(16px, 18px, normal);
   font-family: $ptm;
-
 
   svg {
     margin-right: 18px;
@@ -37,7 +40,7 @@
 }
 
 .main-nav__button {
-  margin-right: 2px;
+  margin: 0 2px 0 6px;
 }
 
 @media #{$tablet-only} {

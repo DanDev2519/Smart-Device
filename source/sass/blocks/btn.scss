@@ -1,8 +1,9 @@
 .btn {
   display: block;
-  padding: 14px 13px 8px 12px;
+  padding: 13px 26px;
 
   @include setFont(14px, 16px, bold);
+  font-family: $rc;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
