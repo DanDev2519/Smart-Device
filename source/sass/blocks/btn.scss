@@ -17,10 +17,13 @@
 
   &:hover,
   &:focus {
-    // background-color: $orange;
+    color: $white;
+    background-color: $blue;
   }
 
   &:active {
-    // background-color: $orange;
+    color: $white;
+    background-color: $blue;
+    opacity: 0.4;
   }
 }
