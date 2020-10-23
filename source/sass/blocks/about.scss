@@ -79,5 +79,31 @@
 }
 
 @media #{$mobile-only} {
+  .about {
+    padding: 33px 15px 64px 15px;
+    max-width: none;
 
+    h2 {
+      @include setFont(28px, 39px, normal);
+      margin: 0;
+    }
+
+    p {
+      margin: 20px 0 20px 2px;
+      max-height: 176px;
+    }
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .about__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about__link {
+    margin: 10px 0 0 2px;
+  }
 }
