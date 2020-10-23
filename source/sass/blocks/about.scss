@@ -1,0 +1,51 @@
+.about {
+  position: relative;
+  margin: 0 auto;
+  padding: 94px 30px 10px 194px;
+  max-width: 1200px;
+
+  h2 {
+    @include setFont(36px, 51px, normal);
+    margin: 0 0 22px;
+  }
+
+  p {
+    @include setFont(16px, 22px, normal);
+    margin: 20px 0;
+  }
+
+  a {
+    color: $blue;
+  }
+
+  &::after {
+    @include pseudo();
+    @include size(220px, 317px);
+    @include bgimg(
+      transparent,
+      url("../img/2005-desktop@1x.png"),
+      $position: bottom 0 right 0
+    );
+
+    @media #{$retina} {
+      background-image: url("../img/2005-desktop@2x.png");
+    }
+    top: 99px;
+    left: -15px;
+  }
+}
+
+.about__link {
+  margin: 38px 0 0 0;
+  width: 180px;
+  border-color: $blue;
+  background-color: $white;
+}
+
+@media #{$tablet-only} {
+
+}
+
+@media #{$mobile-only} {
+
+}
