@@ -1,7 +1,7 @@
 .about {
   position: relative;
   margin: 0 auto;
-  padding: 94px 30px 10px 194px;
+  padding: 94px 30px 112px 194px;
   max-width: 1200px;
 
   h2 {
@@ -43,7 +43,39 @@
 }
 
 @media #{$tablet-only} {
+  .about {
+    padding: 46px 10px 83px 193px;
+    max-width: 95.5%;
 
+    h2 {
+      @include setFont(32px, 45px, normal);
+      margin: 0 0 24px;
+    }
+
+    p {
+      margin: 20px 0 20px 2px;
+      max-height: 90px;
+      column-width: 600px;
+      text-overflow: ellipsis;
+      overflow: hidden;
+    }
+
+    &::after {
+      @include pseudo();
+      @include size(251px, 362px);
+      background-image: url("../img/2005-tablet@1x.png");
+
+      @media #{$retina} {
+        background-image: url("../img/2005-tablet@2x.png");
+      }
+      top: 44px;
+      left: -24px;
+    }
+  }
+
+  .about__link {
+    margin: 40px 0 0 3px;
+  }
 }
 
 @media #{$mobile-only} {
