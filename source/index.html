@@ -126,9 +126,11 @@
       <section class="about">
         <h2>О компании</h2>
         <div class="about__wrapper">
-          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
+          <p>Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с
+            1997
             года. Выполняем срочные заказы и пилотные образцы до 10 дней.</p>
-          <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
+          <p>Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND.
+            Печатные
             платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.</p>
@@ -146,7 +148,7 @@
               <h3>Производство печатных плат</h3>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
-                srcset="img/image1-mobile@1x.webp 1x, img/image1-mobile@2x.webp 2x">
+                  srcset="img/image1-mobile@1x.webp 1x, img/image1-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/image1-tablet@1x.webp 1x, img/image1-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/image1-desktop@1x.webp 1x, img/image1-desktop@2x.webp 2x">
@@ -162,7 +164,7 @@
               <h3>Монтаж печатных плат</h3>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
-                srcset="img/image2-mobile@1x.webp 1x, img/image2-mobile@2x.webp 2x">
+                  srcset="img/image2-mobile@1x.webp 1x, img/image2-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/image2-tablet@1x.webp 1x, img/image2-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/image2-desktop@1x.webp 1x, img/image2-desktop@2x.webp 2x">
@@ -178,7 +180,7 @@
               <h3>Комплектующие для светотехники</h3>
               <picture>
                 <source type="image/webp" media="(max-width: 767px)"
-                srcset="img/image4-mobile@1x.webp 1x, img/image4-mobile@2x.webp 2x">
+                  srcset="img/image4-mobile@1x.webp 1x, img/image4-mobile@2x.webp 2x">
                 <source type="image/webp" media="(max-width: 1023px)"
                   srcset="img/image4-tablet@1x.webp 1x, img/image4-tablet@2x.webp 2x">
                 <source type="image/webp" srcset="img/image4-desktop@1x.webp 1x, img/image4-desktop@2x.webp 2x">
@@ -193,7 +195,42 @@
       </div>
     </section>
 
-
+    <section class="questions theme-light">
+      <h2 class="visually-hidden">Задать вопрос</h2>
+      <picture>
+        <source type="image/webp"
+          srcset="img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@1x.webp 1x, img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@2x.webp 2x">
+        <img src="img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@1x.png"
+          srcset="img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@2x.png 2x"
+          width="511" height="288" alt="Бумажный самолетик">
+      </picture>
+      <article class="questions__window question">
+        <h3 class="question__title">Остались вопросы? Задайте их нам!</h3>
+        <p class="question__info">Мы проконсультируем Вас бесплатно</p>
+        <form class="question__form" action="https://echo.htmlacademy.ru" method="GET">
+          <fieldset class="question__group">
+            <legend class="question__legend visually-hidden">Поля для задания вопроса</legend>
+            <ul class="question__list">
+              <li class="question__item">
+                <label class="question__label" for="name"></label>
+                <input class="question__input" type="text" name="name" id="name" placeholder="Имя" required="">
+              </li>
+              <li class="question__item">
+                <label class="question__label" for="tel"></label>
+                <input class="question__input" type="tel" name="tel" id="tel" placeholder="Телефон"
+                  pattern="(\+?\d[- .]*){11}" required="">
+              </li>
+            </ul>
+            <textarea class="question__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+          </fieldset>
+          <div class="question__bottom">
+            <button class=" question__button" type="submit">Задать вопрос</button>
+            <label class="question__label question__label--checkbox" for="consent">Я согласен на обработку  персональных данных</label>
+            <input class="question__input visually-hidden" type="checkbox" name="consent" id="consent" checked="">
+          </div>
+        </form>
+      </article>
+    </section>
   </main>
 </body>
 
