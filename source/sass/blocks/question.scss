@@ -1,0 +1,130 @@
+.question {
+}
+
+.question__title {
+  margin: 0;
+
+  @include setFont(36px, 51px, normal);
+}
+
+.question__info {
+  margin: 0;
+  padding: 10px 0 30px 5px;
+
+  @include setFont(16px, 22px, normal);
+}
+
+.question__form {
+  margin: 0 0 0 5px;
+}
+
+.question__group {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+.question__legend {
+}
+
+.question__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0;
+
+  @include list(20px 0 40px);
+}
+
+.question__item {
+}
+
+.question__label {
+  position: relative;
+  display: block;
+
+  &--checkbox {
+    cursor: pointer;
+
+    padding: 0 0 0 32px;
+    width: 230px;
+    box-sizing: content-box;
+
+    @include setFont(14px, 16px, normal);
+    font-family: $ptm;
+    color: $white;
+
+    &::before {
+      @include pseudo();
+      @include size(15px, 15px);
+      border: 1px solid $white;
+      top: 2px;
+      left: -2px;
+    }
+
+    &:hover,
+    &:focus {
+      text-decoration: underline;
+    }
+
+    &:active {
+      opacity: 0.4;
+      text-decoration: underline;
+    }
+  }
+}
+
+.question__input {
+  &:focus + .question__label::before {
+    outline: $white solid 2px;
+  }
+
+  &:checked + .question__label--checkbox::after {
+    @include pseudo();
+    @include size(9px, 6px);
+    @include bgimg(transparent, url("../img/icon-check.svg"));
+    top: 7px;
+    left: 2px;
+  }
+}
+
+.question__input,
+.question__textarea {
+  padding: 14px 16px;
+  width: 270px;
+
+  @include setFont(16px, 22px, normal);
+  font-family: $ptm;
+
+  background: rgba($white, 0.1);
+  border: none;
+
+  &::placeholder {
+    color: $white;
+  }
+}
+
+.question__textarea {
+  @include size(570px, 154px);
+  resize: vertical;
+}
+
+.question__bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0 114px;
+}
+
+.question__button {
+  width: 270px;
+}
+
+@media #{$tablet-only} {
+
+}
+
+@media #{$mobile-only} {
+
+}

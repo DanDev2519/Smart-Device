@@ -1,0 +1,33 @@
+.questions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
+  // background-color: $blue;
+
+  img {
+    @include size(511px, 288px);
+    @include bgimg(
+      transparent,
+      url("../img/mask group triangles-desktop@1x.png"),
+      $position: bottom 29.7% right 14.6%
+    );
+    background-size: 272.7%;
+
+    @media #{$retina} {
+      background-image: url("../img/mask group triangles-desktop@2x.png");
+    }
+  }
+}
+
+.questions__window {
+    padding: 92px 0 0 85px;
+}
+
+@media #{$tablet-only} {
+
+}
+
+@media #{$mobile-only} {
+
+}

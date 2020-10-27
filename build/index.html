@@ -194,7 +194,7 @@
       </div>
     </section>
 
-    <section class="questions theme-light">
+    <section class="questions theme-dark">
       <h2 class="visually-hidden">Задать вопрос</h2>
       <picture>
         <source type="image/webp" srcset="img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@1x.webp 1x, img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@2x.webp 2x">
@@ -216,17 +216,19 @@
                 <input class="question__input" type="tel" name="tel" id="tel" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
               </li>
             </ul>
-            <textarea class="question__textarea" name="comment" id="comment" cols="30" rows="10" placeholder="Ваш вопрос"></textarea>
+            <textarea class="question__textarea" name="comment" id="comment" cols="53" rows="5" placeholder="Ваш вопрос"></textarea>
           </fieldset>
           <div class="question__bottom">
-            <button class=" question__button" type="submit">Задать вопрос</button>
-            <label class="question__label question__label--checkbox" for="consent">Я согласен на обработку  персональных данных</label>
+            <button class="btn question__button" type="submit">Задать вопрос</button>
             <input class="question__input visually-hidden" type="checkbox" name="consent" id="consent" checked="">
+            <label class="question__label question__label--checkbox" for="consent">Я согласен на обработку  персональных данных</label>
           </div>
         </form>
       </article>
     </section>
   </main>
+
+  <script src="js/main.js"></script>
 </body>
 
 </html>
