@@ -2,10 +2,7 @@
   @include bgimg(
     $blue,
     url("../img/bgimg-form-desktop@1x.png"),
-    // $position: top 63% right -505%
     $position: bottom 37% left 175px
-    // $position: bottom 37% right -75px
-
   );
 
   @media #{$retina} {
@@ -39,37 +36,10 @@
 @media #{$tablet-only} {
   .questions {
     background-image: none;
-    // @include bgimg(
-    //   $blue,
-    //   url("../img/bgimg-form-desktop@1x.png"),
-    //   // $position: top 63% right -505%
-    //   $position: bottom 37% left 175px
-    //   // $position: bottom 37% right -75px
-
-    // );
-
-    // @media #{$retina} {
-    //   background-image: url("../img/bgimg-form-desktop@2x.png");
-    // }
 
     img {
       display: none;
-      // margin-right: 42px;
-      // padding: 161px 0 10px 0;
-      // box-sizing: content-box;
-
-      // @include size(511px, 288px);
     }
-  }
-
-  .questions__wrapper {
-    // display: flex;
-    // justify-content: center;
-    // flex-wrap: wrap;
-
-    // margin: 0 auto;
-    // max-width: 1220px;
-    // overflow: hidden;
   }
 
   .questions__window {
@@ -79,5 +49,7 @@
 }
 
 @media #{$mobile-only} {
-
+  .questions__window {
+    padding: 30px 15px 16px;
+  }
 }
