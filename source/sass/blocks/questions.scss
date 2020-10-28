@@ -1,27 +1,39 @@
 .questions {
+  @include bgimg(
+    $blue,
+    url("../img/bgimg-form-desktop@1x.png"),
+    // $position: top 63% right -505%
+    $position: bottom 37% left 175px
+    // $position: bottom 37% right -75px
+
+  );
+
+  @media #{$retina} {
+    background-image: url("../img/bgimg-form-desktop@2x.png");
+  }
+
+  img {
+    margin-right: 42px;
+    padding: 161px 0 10px 0;
+    box-sizing: content-box;
+
+    @include size(511px, 288px);
+  }
+}
+
+.questions__wrapper {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
 
-  // background-color: $blue;
-
-  img {
-    @include size(511px, 288px);
-    @include bgimg(
-      transparent,
-      url("../img/mask group triangles-desktop@1x.png"),
-      $position: bottom 29.7% right 14.6%
-    );
-    background-size: 272.7%;
-
-    @media #{$retina} {
-      background-image: url("../img/mask group triangles-desktop@2x.png");
-    }
-  }
+  margin: 0 auto;
+  max-width: 1220px;
+  overflow: hidden;
 }
 
 .questions__window {
-    padding: 92px 0 0 85px;
+  margin-left: 42px;
+  padding: 92px 25px 74px;
 }
 
 @media #{$tablet-only} {
