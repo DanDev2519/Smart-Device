@@ -95,6 +95,7 @@
 
   @include setFont(16px, 22px, normal);
   font-family: $ptm;
+  color: $dark-blue;
 
   background: rgba($white, 0.1);
   border: none;
@@ -122,7 +123,40 @@
 }
 
 @media #{$tablet-only} {
+  .question__title {
+    @include setFont(32px, 45px, normal);
+  }
 
+  .question__info {
+    padding: 15px 0 30px 5px;
+  }
+
+  .question__list {
+    padding: 25px 0 43px;
+  }
+
+  .question__label {
+    &--checkbox {
+      padding: 0 8px 0 32px;
+    }
+  }
+
+  .question__input,
+  .question__textarea {
+    width: 279px;
+  }
+
+  .question__textarea {
+    @include size(590px, 160px);
+  }
+
+  .question__bottom {
+    padding: 42px 0;
+  }
+
+  .question__button {
+    width: 280px;
+  }
 }
 
 @media #{$mobile-only} {

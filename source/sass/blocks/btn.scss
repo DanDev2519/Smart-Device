@@ -19,11 +19,13 @@
   &:focus {
     color: $white;
     background-color: $blue;
+    text-decoration: underline;
   }
 
   &:active {
     color: $white;
     background-color: $blue;
+    text-decoration: underline;
     opacity: 0.4;
   }
 }
