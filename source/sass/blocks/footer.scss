@@ -1,0 +1,84 @@
+.footer {
+  background-color: $light-gray3;
+
+  a,
+  p {
+    color: rgba($dark-blue, 0.5);
+    font-family: $ptm;
+  }
+}
+
+.footer__wrapper {
+  margin: 0 auto;
+  max-width: 1412px;
+  overflow: hidden;
+
+}
+
+.footer__left {
+
+  img {
+    @include size(216px, 52px);
+  }
+
+  p {
+    display: none;
+  }
+}
+
+.footer__social-lit {
+
+}
+
+.footer__social-item {
+  svg {
+    fill: $light-gray2;
+
+    &:hover {
+      fill: $blue;
+    }
+  }
+}
+
+.footer__right {
+
+  h3 {
+    @include setFont(15px, 16px, normal);
+    color: $dark-blue;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+  }
+}
+
+.footer__right-first {
+
+}
+
+.footer__right-second {
+
+}
+
+.footer__list {
+
+  a {
+    @include setFont(15px, 25px, normal);
+  }
+}
+
+.footer__bottom {
+
+  a,
+  p {
+    @include setFont(13px, 24px, normal);
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+  }
+
+  a {
+
+  }
+
+  p {
+
+  }
+}
