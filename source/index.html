@@ -64,7 +64,7 @@
       <div class="promo__wrapper">
         <h1>Печатные платы</h1>
         <p>производство и монтаж, поставка комплектующих, блоков и модулей</p>
-        <a href="#" class="btn promo__btn">
+        <a href="#questions" class="btn promo__btn">
           <span class="promo__btn-text promo__btn-text--long">Получить бесплатную консультацию</span>
           <span class="promo__btn-text promo__btn-text--short">Бесплатная консультация</span>
         </a>
@@ -195,7 +195,7 @@
       </div>
     </section>
 
-    <section class="questions theme-dark">
+    <section class="questions theme-dark" id="questions">
       <div class="questions__wrapper">
         <h2 class="visually-hidden">Задать вопрос</h2>
         <picture>
@@ -222,18 +222,80 @@
                     pattern="(\+?\d[- .]*){11}" required="">
                 </li>
               </ul>
-              <textarea class="question__textarea" name="comment" id="comment" cols="53" rows="5" placeholder="Ваш вопрос"></textarea>
+              <textarea class="question__textarea" name="comment" id="comment" cols="53" rows="5"
+                placeholder="Ваш вопрос"></textarea>
             </fieldset>
             <div class="question__bottom">
               <button class="btn question__button" type="submit">Задать вопрос</button>
-              <input class="question__input visually-hidden" type="checkbox" name="consent" id="consent" checked="" required>
-              <label class="question__label question__label--checkbox" for="consent">Я согласен на обработку  персональных данных</label>
+              <input class="question__input visually-hidden" type="checkbox" name="consent" id="consent" checked=""
+                required>
+              <label class="question__label question__label--checkbox" for="consent">Я согласен на обработку
+                персональных данных</label>
             </div>
           </form>
         </article>
       </div>
     </section>
   </main>
+
+  <footer class="footer theme-light">
+    <div class="footer__left">
+      <picture>
+        <source type="image/webp" media="(max-width: 767px)"
+          srcset="img/logo-bottom-mobile@1x.webp 1x, img/logo-bottom-mobile@2x.webp 2x">
+        <source type="image/webp" media="(max-width: 1023px)"
+          srcset="img/logo-bottom-tablet@1x.webp 1x, img/logo-bottom-tablet@2x.webp 2x">
+        <source type="image/webp" srcset="img/logo-bottom-desktop@1x.webp 1x, img/logo-bottom-desktop@2x.webp 2x">
+        <source media="(max-width: 767px)" srcset="img/logo-bottom-mobile@1x.png 1x, img/logo-bottom-mobile@2x.png 2x">
+        <source media="(max-width: 1023px)" srcset="img/logo-bottom-tablet@1x.png 1x, img/logo-bottom-tablet@2x.png 2x">
+        <img src="img/logo-bottom-desktop@1x.png" srcset="img/logo-bottom-desktop@2x.png 2x" width="202" height="52"
+          alt="Логотип">
+      </picture>
+      <p>1999-2018 SD Service Devices</p>
+      <ul class="footer__sosial-lit">
+        <li class="footer__sosial-tem"><a href="#">
+            <svg role="img" width="27" height="27">
+              <use xlink:href="#icon-facebook"></use>
+            </svg>
+          </a></li>
+        <li class="footer__sosial-tem"><a href="#">
+            <svg role="img" width="27" height="26">
+              <use xlink:href="#icon-ok"></use>
+            </svg>
+          </a></li>
+        <li class="footer__sosial-tem"><a href="#">
+            <svg role="img" width="27" height="26">
+              <use xlink:href="#icon-vk"></use>
+            </svg>
+          </a></li>
+      </ul>
+    </div>
+    <div class="footer__roght">
+      <h3>Разделы сайта</h3>
+      <ul class="footer__list">
+        <li><a href="#">О компании</a></li>
+        <li><a href="#">Продукты</a></li>
+        <li><a href="#">Производство печатных плат</a></li>
+        <li><a href="#">Монтаж печатных плат</a></li>
+        <li><a href="#">Комплектующие</a></li>
+        <li><a href="#">Доставка</a></li>
+        <li><a href="#">Контакты</a></li>
+      </ul>
+      <h3>Наш офис</h3>
+      <ul class="footer__list">
+        <li><a href="#">г. Мытищи, Олимпийский проспект, д.10</a></li>
+        <li><a href="tel:+74955894050">+7 (495) 589-40-50</a></li>
+        <li><a href="tel:+79250038767">+7 (925) 003-87-67</a></li>
+        <li><a href="tel:+792692608079">+7 (926) 926-080-79</a></li>
+      </ul>
+    </div>
+    <div class="footer__bottom">
+      <p>Все права защищены</p>
+      <p>1999-2018 SD Service Devices</p>
+      <a href="#">Условия конфиденциальности</a>
+      <a href="#">Developed by wow studio </a>
+    </div>
+  </footer>
 
   <script src="js/main.js"></script>
 </body>
