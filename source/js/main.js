@@ -28,3 +28,24 @@ try {
 } catch (err) {
   isStorageSupport = false;
 }
+
+// Аккордеон
+var panel = document.querySelector('.panel');
+var panelItems = panel.querySelectorAll('.panel__item');
+var activePanel;
+
+panelItems.forEach(function (item) {
+  item.classList.remove('panel__item--opened');
+  item.classList.add('panel__item--closed');
+
+  item.querySelector('h3').addEventListener('click', function (evt) {
+    evt.preventDefault();
+    item.classList.add('panel__item--opened');
+    item.classList.remove('panel__item--closed');
+    if (activePanel) {
+      activePanel.classList.add('panel__item--closed');
+      activePanel.classList.remove('panel__item--opened');
+    }
+    activePanel = (activePanel === item) ? 0 : item;
+  });
+});
