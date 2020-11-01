@@ -1,14 +1,16 @@
-.question__title {
-  margin: 0;
+.question {
+  h3 {
+    margin: 0;
 
-  @include setFont(36px, 51px, normal);
-}
+    @include setFont(36px, 51px, normal);
+  }
 
-.question__info {
-  margin: 0;
-  padding: 10px 0 30px 5px;
+  p {
+    margin: 0;
+    padding: 10px 0 30px 5px;
 
-  @include setFont(16px, 22px, normal);
+    @include setFont(16px, 22px, normal);
+  }
 }
 
 .question__form {
@@ -113,13 +115,65 @@
   width: 270px;
 }
 
-@media #{$tablet-only} {
-  .question__title {
-    @include setFont(32px, 45px, normal);
+.modal {
+  h3 {
+    @include setFont(28px, 39px, normal);
   }
 
-  .question__info {
-    padding: 15px 0 30px 5px;
+  p {
+    padding: 13px 10px 16px 0;
+  }
+
+  .question__form {
+    margin: 0;
+  }
+
+  .question__list {
+    flex-direction: column;
+    padding: 0 0 15px;
+  }
+
+  .question__item {
+    padding: 16px 0;
+  }
+
+  .question__label {
+    &--checkbox {
+      padding: 0 0 0 47px;
+      width: 340px;
+    }
+  }
+
+  .question__input,
+  .question__textarea {
+    padding: 14px 25px;
+    width: 412px;
+  }
+
+  .question__textarea {
+    height: 104px;
+  }
+
+  .question__bottom {
+    padding: 25px 0;
+  }
+
+  .question__button {
+    width: 412px;
+    padding: 15px 26px;
+    margin-bottom: 35px;
+  }
+}
+
+@media #{$tablet-only} {
+  .question {
+    h3 {
+      @include setFont(32px, 45px, normal);
+    }
+
+    p {
+      padding: 15px 0 30px 5px;
+    }
   }
 
   .question__list {
@@ -151,12 +205,14 @@
 }
 
 @media #{$mobile-only} {
-  .question__title {
-    @include setFont(28px, 39px, normal);
-  }
+  .question {
+    h3 {
+      @include setFont(28px, 39px, normal);
+    }
 
-  .question__info {
-    padding: 13px 0 11px;
+    p {
+      padding: 13px 0 11px;
+    }
   }
 
   .question__form {

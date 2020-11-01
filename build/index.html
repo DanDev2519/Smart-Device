@@ -202,8 +202,8 @@
           <img src="img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@1x.png" srcset="img/paper_airplane_3d_model_obj_blend_16ec3a53-a93c-4854-8f34-5481fc9139d1-desktop@2x.png 2x" width="511" height="288" alt="Бумажный самолетик">
         </picture>
         <article class="questions__window question">
-          <h3 class="question__title">Остались вопросы? Задайте их нам!</h3>
-          <p class="question__info">Мы проконсультируем Вас бесплатно</p>
+          <h3>Остались вопросы? Задайте их нам!</h3>
+          <p>Мы проконсультируем Вас бесплатно</p>
           <form class="question__form" action="https://echo.htmlacademy.ru" method="GET">
             <fieldset class="question__group">
               <legend class="visually-hidden">Поля для задания вопроса</legend>
@@ -298,6 +298,36 @@
       </div>
     </div>
   </footer>
+
+  <section class="modal modal--show theme-dark">
+    <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
+    <article class="question">
+      <h3>Закажите звонок</h3>
+      <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
+      <form class="question__form" action="https://echo.htmlacademy.ru" method="GET">
+        <fieldset class="question__group">
+          <legend class="visually-hidden">Поля для задания вопроса</legend>
+          <ul class="question__list">
+            <li class="question__item">
+              <label class="question__label" for="name-popup"></label>
+              <input class="question__input" type="text" name="name-popup" id="name-popup" placeholder="Имя" required="">
+            </li>
+            <li class="question__item">
+              <label class="question__label" for="tel-popup"></label>
+              <input class="question__input" type="tel" name="tel-popup" id="tel-popup" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
+            </li>
+          </ul>
+          <textarea class="question__textarea" name="comment" id="comment-popup" cols="53" rows="5" placeholder="Ваш вопрос"></textarea>
+        </fieldset>
+        <div class="question__bottom">
+          <button class="btn question__button" type="submit">Отправить</button>
+          <input class="question__input visually-hidden" type="checkbox" name="consent-popup" id="consent-popup" checked="" required="">
+          <label class="question__label question__label--checkbox" for="consent-popup">Я согласен на обработку
+            персональных данных</label>
+        </div>
+      </form>
+    </article>
+  </section>
 
   <script src="js/main.js"></script>
 </body>

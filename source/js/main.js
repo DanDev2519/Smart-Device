@@ -17,18 +17,6 @@
 //   }
 // });
 
-// Проверка поддержки хранилища
-var isStorageSupport = true;
-var storageName = '';
-var storageTel = '';
-
-try {
-  storageName = localStorage.getItem('name');
-  storageTel = localStorage.getItem('tel');
-} catch (err) {
-  isStorageSupport = false;
-}
-
 // Аккордеон
 var panel = document.querySelector('.panel');
 var panelItems = panel.querySelectorAll('.panel__item');
@@ -49,3 +37,15 @@ panelItems.forEach(function (item) {
     activePanel = (activePanel === item) ? 0 : item;
   });
 });
+
+// Проверка поддержки хранилища
+var isStorageSupport = true;
+var storageName = '';
+var storageTel = '';
+
+try {
+  storageName = localStorage.getItem('name');
+  storageTel = localStorage.getItem('tel');
+} catch (err) {
+  isStorageSupport = false;
+}

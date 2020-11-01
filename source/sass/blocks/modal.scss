@@ -1,0 +1,37 @@
+.modal {
+  position: fixed;
+  top: 40.4%;
+  left: 50%;
+  display: none;
+  width: 490px;
+  padding: 30px 40px 10px;
+  transform: translate(-50%, -50%);
+  background-color: $blue;
+  // z-index: 3;
+
+  &--show {
+    display: block;
+    animation: bounce 0.6s;
+  }
+
+  &--error {
+    animation: shake 0.6s;
+  }
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+
+  @include size(17px, 17px);
+  @include pseudo();
+  @include bgimg(
+    transparent,
+    url("../img/close.svg"),
+    // $position: bottom 29.7% right 14.6%
+  );
+  border: 0;
+  cursor: pointer;
+  // z-index: 4;
+}
