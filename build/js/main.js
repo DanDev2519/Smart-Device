@@ -17,17 +17,9 @@
 //   }
 // });
 
-// Проверка поддержки хранилища
-var isStorageSupport = true;
-var storageName = '';
-var storageTel = '';
-
-try {
-  storageName = localStorage.getItem('name');
-  storageTel = localStorage.getItem('tel');
-} catch (err) {
-  isStorageSupport = false;
-}
+var KeyCode = {
+  ESC: 27,
+};
 
 // Аккордеон
 var panel = document.querySelector('.panel');
@@ -49,3 +41,97 @@ panelItems.forEach(function (item) {
     activePanel = (activePanel === item) ? 0 : item;
   });
 });
+
+// Проверка поддержки хранилища
+var isStorageSupport = true;
+var storageName = '';
+var storageTel = '';
+var storageQuestion = '';
+
+try {
+  storageName = localStorage.getItem('name');
+  storageTel = localStorage.getItem('tel');
+  storageQuestion = localStorage.getItem('comment');
+} catch (err) {
+  isStorageSupport = false;
+}
+
+// Оживление попапа Задать вопрос
+var writeLink = document.querySelector('.main-nav__button');
+var closePopup = function () {
+  writePopup.classList.remove('modal--show');
+  writePopup.classList.remove('modal--error');
+  overlay.style.display = 'none';
+document.body.style.overflow = ''
+//   var scrollY = document.body.style.top;
+//   document.body.style.position = '';
+//   document.body.style.top = '';
+//   window.scrollTo(0, parseInt(scrollY || '0') * -1);
+};
+
+if (writeLink) {
+  var overlay = document.querySelector('.overlay');
+  var writePopup = document.querySelector('.modal');
+  var writeClose = writePopup.querySelector('.modal__close');
+
+  var writeForm = writePopup.querySelector('form');
+  var writeName = writePopup.querySelector('[name=name]');
+  var writeTel = writePopup.querySelector('[name=tel]');
+  var writeLetter = writePopup.querySelector('[name=comment]');
+
+  writeLink.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    writePopup.classList.add('modal--show');
+    overlay.style.display = 'block';
+//       document.body.style.position = 'fixed';
+      // document.body.style.top = `-${window.scrollY}px`;
+document.body.style.overflow = 'hidden';
+
+    if (storageName) {
+      writeName.value = storageName;
+      writeTel.focus();
+      if (storageTel) {
+        writeTel.value = storageTel;
+        writeLetter.focus();
+      }
+      if (storageQuestion) {
+        writeLetter.value = storageQuestion;
+        writeLetter.focus();
+      }
+    } else {
+      writeName.focus();
+    }
+  });
+
+  writeClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closePopup();
+  });
+
+  overlay.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closePopup();
+  });
+
+  writeForm.addEventListener('submit', function (evt) {
+    if (!writeName.value || !writeTel.value || !writeLetter.value) {
+      evt.preventDefault();
+      writePopup.classList.remove('modal--error');
+      writePopup.offsetWidth = writePopup.offsetWidth;
+      writePopup.classList.add('modal--error');
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', writeName.value);
+        localStorage.setItem('tel', writeTel.value);
+        localStorage.setItem('comment', writeLetter.value);
+      }
+    }
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === KeyCode.ESC) {
+      evt.preventDefault();
+      closePopup();
+    }
+  });
+}

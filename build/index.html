@@ -299,7 +299,8 @@
     </div>
   </footer>
 
-  <section class="modal modal--show theme-dark">
+  <div class="overlay"></div>
+  <section class="modal theme-dark">
     <button class="modal__close" type="button"><span class="visually-hidden">Закрыть</span></button>
     <article class="question">
       <h3>Закажите звонок</h3>
@@ -310,18 +311,18 @@
           <ul class="question__list">
             <li class="question__item">
               <label class="question__label" for="name-popup"></label>
-              <input class="question__input" type="text" name="name-popup" id="name-popup" placeholder="Имя" required="">
+              <input class="question__input" type="text" name="name" id="name-popup" placeholder="Имя" required="">
             </li>
             <li class="question__item">
               <label class="question__label" for="tel-popup"></label>
-              <input class="question__input" type="tel" name="tel-popup" id="tel-popup" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
+              <input class="question__input" type="tel" name="tel" id="tel-popup" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
             </li>
           </ul>
           <textarea class="question__textarea" name="comment" id="comment-popup" cols="53" rows="5" placeholder="Ваш вопрос"></textarea>
         </fieldset>
         <div class="question__bottom">
           <button class="btn question__button" type="submit">Отправить</button>
-          <input class="question__input visually-hidden" type="checkbox" name="consent-popup" id="consent-popup" checked="" required="">
+          <input class="question__input visually-hidden" type="checkbox" name="consent" id="consent-popup" checked="" required="">
           <label class="question__label question__label--checkbox" for="consent-popup">Я согласен на обработку
             персональных данных</label>
         </div>

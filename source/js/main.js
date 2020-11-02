@@ -17,6 +17,10 @@
 //   }
 // });
 
+var KeyCode = {
+  ESC: 27,
+};
+
 // Аккордеон
 var panel = document.querySelector('.panel');
 var panelItems = panel.querySelectorAll('.panel__item');
@@ -42,10 +46,86 @@ panelItems.forEach(function (item) {
 var isStorageSupport = true;
 var storageName = '';
 var storageTel = '';
+var storageQuestion = '';
 
 try {
   storageName = localStorage.getItem('name');
   storageTel = localStorage.getItem('tel');
+  storageQuestion = localStorage.getItem('comment');
 } catch (err) {
   isStorageSupport = false;
+}
+
+// Оживление попапа Задать вопрос
+var writeLink = document.querySelector('.main-nav__button');
+var closePopup = function () {
+  writePopup.classList.remove('modal--show');
+  writePopup.classList.remove('modal--error');
+  overlay.style.display = 'none';
+  document.body.style.overflow = '';
+};
+
+if (writeLink) {
+  var overlay = document.querySelector('.overlay');
+  var writePopup = document.querySelector('.modal');
+  var writeClose = writePopup.querySelector('.modal__close');
+
+  var writeForm = writePopup.querySelector('form');
+  var writeName = writePopup.querySelector('[name=name]');
+  var writeTel = writePopup.querySelector('[name=tel]');
+  var writeLetter = writePopup.querySelector('[name=comment]');
+
+  writeLink.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    writePopup.classList.add('modal--show');
+    overlay.style.display = 'block';
+    document.body.style.overflow = 'hidden';
+
+    if (storageName) {
+      writeName.value = storageName;
+      writeTel.focus();
+      if (storageTel) {
+        writeTel.value = storageTel;
+        writeLetter.focus();
+      }
+      if (storageQuestion) {
+        writeLetter.value = storageQuestion;
+        writeLetter.focus();
+      }
+    } else {
+      writeName.focus();
+    }
+  });
+
+  writeClose.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closePopup();
+  });
+
+  overlay.addEventListener('click', function (evt) {
+    evt.preventDefault();
+    closePopup();
+  });
+
+  writeForm.addEventListener('submit', function (evt) {
+    if (!writeName.value || !writeTel.value || !writeLetter.value) {
+      evt.preventDefault();
+      writePopup.classList.remove('modal--error');
+      writePopup.offsetWidth = writePopup.offsetWidth;
+      writePopup.classList.add('modal--error');
+    } else {
+      if (isStorageSupport) {
+        localStorage.setItem('name', writeName.value);
+        localStorage.setItem('tel', writeTel.value);
+        localStorage.setItem('comment', writeLetter.value);
+      }
+    }
+  });
+
+  window.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === KeyCode.ESC) {
+      evt.preventDefault();
+      closePopup();
+    }
+  });
 }
