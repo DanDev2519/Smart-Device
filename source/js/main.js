@@ -129,3 +129,19 @@ if (writeLink) {
     }
   });
 }
+
+// Плавная прокрутка
+var anchors = document.querySelectorAll('a.scroll-to');
+
+anchors.forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var blockID = anchor.getAttribute('href');
+
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});

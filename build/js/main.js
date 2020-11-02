@@ -62,12 +62,7 @@ var closePopup = function () {
   writePopup.classList.remove('modal--show');
   writePopup.classList.remove('modal--error');
   overlay.style.display = 'none';
-  // document.body.style.overflow = '';
-  var scrollY = document.body.style.top;
-  document.body.style.position = '';
-  document.body.style.width = 'auto';
-  document.body.style.top = '';
-  window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  document.body.style.overflow = '';
 };
 
 if (writeLink) {
@@ -84,10 +79,7 @@ if (writeLink) {
     evt.preventDefault();
     writePopup.classList.add('modal--show');
     overlay.style.display = 'block';
-    // document.body.style.overflow = 'hidden';
-    document.body.style.position = 'fixed';
-    document.body.style.width = '100%';
-    document.body.style.top = `-${window.scrollY}px`;
+    document.body.style.overflow = 'hidden';
 
     if (storageName) {
       writeName.value = storageName;
@@ -137,3 +129,19 @@ if (writeLink) {
     }
   });
 }
+
+// Плавная прокрутка
+var anchors = document.querySelectorAll('a.scroll-to');
+
+anchors.forEach(function (anchor) {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+
+    var blockID = anchor.getAttribute('href');
+
+    document.querySelector(blockID).scrollIntoView({
+      behavior: 'smooth',
+      block: 'start'
+    });
+  });
+});
