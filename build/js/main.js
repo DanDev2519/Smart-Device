@@ -62,11 +62,12 @@ var closePopup = function () {
   writePopup.classList.remove('modal--show');
   writePopup.classList.remove('modal--error');
   overlay.style.display = 'none';
-document.body.style.overflow = ''
-//   var scrollY = document.body.style.top;
-//   document.body.style.position = '';
-//   document.body.style.top = '';
-//   window.scrollTo(0, parseInt(scrollY || '0') * -1);
+  // document.body.style.overflow = '';
+  var scrollY = document.body.style.top;
+  document.body.style.position = '';
+  document.body.style.width = 'auto';
+  document.body.style.top = '';
+  window.scrollTo(0, parseInt(scrollY || '0') * -1);
 };
 
 if (writeLink) {
@@ -83,9 +84,10 @@ if (writeLink) {
     evt.preventDefault();
     writePopup.classList.add('modal--show');
     overlay.style.display = 'block';
-//       document.body.style.position = 'fixed';
-      // document.body.style.top = `-${window.scrollY}px`;
-document.body.style.overflow = 'hidden';
+    // document.body.style.overflow = 'hidden';
+    document.body.style.position = 'fixed';
+    document.body.style.width = '100%';
+    document.body.style.top = `-${window.scrollY}px`;
 
     if (storageName) {
       writeName.value = storageName;
