@@ -15,17 +15,15 @@
     color: $white;
   }
 
-    a {
-      &:hover,
-      &:focus {
-        // color: $white;
-        text-decoration: underline;
-      }
-
-      &:active {
-        // color: $white;
-        opacity: 0.4;
-        text-decoration: underline;
-      }
+  a {
+    &:hover,
+    &:focus {
+      text-decoration: underline;
     }
+
+    &:active {
+      opacity: 0.4;
+      text-decoration: underline;
+    }
+  }
 }

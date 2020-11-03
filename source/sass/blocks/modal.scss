@@ -29,9 +29,7 @@
   @include bgimg(
     transparent,
     url("../img/close.svg"),
-    // $position: bottom 29.7% right 14.6%
   );
   border: 0;
   cursor: pointer;
-  // z-index: 4;
 }

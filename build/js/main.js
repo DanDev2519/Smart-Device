@@ -1,22 +1,5 @@
 'use strict';
 
-// var navMain = document.querySelector('.main-nav');
-// var navToggle = document.querySelector('.main-nav__toggle');
-
-// navMain.classList.remove('main-nav--nojs');
-// navMain.classList.remove('main-nav--opened');
-// navMain.classList.add('main-nav--closed');
-
-// navToggle.addEventListener('click', function () {
-//   if (navMain.classList.contains('main-nav--closed')) {
-//     navMain.classList.remove('main-nav--closed');
-//     navMain.classList.add('main-nav--opened');
-//   } else {
-//     navMain.classList.add('main-nav--closed');
-//     navMain.classList.remove('main-nav--opened');
-//   }
-// });
-
 var KeyCode = {
   ESC: 27,
 };
@@ -144,4 +127,28 @@ anchors.forEach(function (anchor) {
       block: 'start'
     });
   });
+});
+
+
+// Поле ввода телефона
+var inputTels = document.querySelectorAll('input[type="tel"]');
+
+inputTels.forEach(function (input) {
+  input.onfocus = function () {
+    if (this.value === '') {
+      this.value = '+7(';
+    }
+  };
+
+  input.onblur = function () {
+    if (this.value === '+7(') {
+      this.value = '';
+    }
+  };
+
+  input.oninput = function () {
+    if (this.value.length === 6 && !this.value.includes(')')) {
+      this.value += ')';
+    }
+  };
 });

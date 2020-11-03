@@ -4,8 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <title>Smart Device</title>
-  <meta name="keywords" content="">
-  <meta name="description" content="">
+  <meta name="keywords"
+    content="Печатные платы, производство печатных плат, электроника, микроэлектроника, умные устройства, электронные комплектующие, Smart device">
+  <meta name="description"
+    content="Smart device поставляет электронные комплектующие, производит печатные платы и предоставляет мировые технологии. Выполняет срочные заказы и пилотные образцы печатных плат и многое другое.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="format-detection" content="telephone=no">
@@ -23,7 +25,6 @@
 
   <header class="page-header theme-dark">
     <nav class="main-nav main-nav--opened main-nav--nojs">
-      <!-- <div class="main-nav__wrapeer"> -->
       <a href="#" class="main-nav__logo">
         <picture>
           <source type="image/webp" media="(max-width: 767px)"
@@ -36,10 +37,6 @@
           <img src="img/logo-desktop@1x.png" srcset="img/logo-desktop@2x.png 2x" width="202" height="52" alt="Логотип">
         </picture>
       </a>
-      <!-- <button class="main-nav__toggle">
-          <span class="visually-hidden">Открыть меню</span>
-        </button>
-      </div> -->
       <ul class="main-nav__list">
         <li class="main-nav__item">
           <a href="mailto:info@sd.ru" class="main-nav__link main-nav__link--envelope">
@@ -214,13 +211,13 @@
               <legend class="visually-hidden">Поля для задания вопроса</legend>
               <ul class="question__list">
                 <li class="question__item">
-                  <label for="name"></label>
+                  <label class="visually-hidden" for="name">Имя</label>
                   <input type="text" name="name" id="name" placeholder="Имя" required="">
                 </li>
                 <li class="question__item">
-                  <label for="tel"></label>
+                  <label class="visually-hidden" for="tel">Телефон</label>
                   <input type="tel" name="tel" id="tel" placeholder="Телефон"
-                    pattern="(\+?\d[- .]*){11}" required="">
+                    pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7}$" required="">
                 </li>
               </ul>
               <textarea class="question__textarea" name="comment" id="comment" cols="53" rows="5"
@@ -228,8 +225,7 @@
             </fieldset>
             <div class="question__bottom">
               <button class="btn question__button" type="submit">Задать вопрос</button>
-              <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked=""
-                required>
+              <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked="" required>
               <label for="consent">
                 Я согласен на обработку персональных данных</label>
             </div>
@@ -259,16 +255,19 @@
           <p>1999-2018 SD Service Devices</p>
           <ul class="footer__social-lit">
             <li class="footer__social-item"><a href="#">
+                <span class="visually-hidden">Facebook</span>
                 <svg role="img" width="27" height="27">
                   <use xlink:href="#icon-facebook"></use>
                 </svg>
               </a></li>
             <li class="footer__social-item"><a href="#">
+              <span class="visually-hidden">Одноклассники</span>
                 <svg role="img" width="27" height="26">
                   <use xlink:href="#icon-ok"></use>
                 </svg>
               </a></li>
             <li class="footer__social-item"><a href="#">
+              <span class="visually-hidden">Вконтакте</span>
                 <svg role="img" width="27" height="26">
                   <use xlink:href="#icon-vk"></use>
                 </svg>
@@ -324,13 +323,13 @@
           <legend class="visually-hidden">Поля для задания вопроса</legend>
           <ul class="question__list">
             <li class="question__item">
-              <label for="name-popup"></label>
+              <label class="visually-hidden" for="name-popup">Имя</label>
               <input type="text" name="name" id="name-popup" placeholder="Имя" required="">
             </li>
             <li class="question__item">
-              <label for="tel-popup"></label>
+              <label class="visually-hidden" for="tel-popup">Телефон</label>
               <input type="tel" name="tel" id="tel-popup" placeholder="Телефон"
-                pattern="(\+?\d[- .]*){11}" required="">
+                pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7}$" required="">
             </li>
           </ul>
           <textarea class="question__textarea" name="comment" id="comment-popup" cols="53" rows="5"
@@ -338,10 +337,8 @@
         </fieldset>
         <div class="question__bottom">
           <button class="btn question__button" type="submit">Отправить</button>
-          <input class="visually-hidden" type="checkbox" name="consent" id="consent-popup" checked=""
-            required>
-          <label for="consent-popup">Я согласен на обработку
-            персональных данных</label>
+          <input class="visually-hidden" type="checkbox" name="consent" id="consent-popup" checked="" required>
+          <label for="consent-popup">Я согласен на обработку персональных данных</label>
         </div>
       </form>
     </article>
