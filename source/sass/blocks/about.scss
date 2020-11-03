@@ -18,6 +18,10 @@
     color: $blue;
   }
 
+  em {
+    display: none;
+  }
+
   &::after {
     @include pseudo();
     @include size(220px, 317px);
@@ -58,6 +62,14 @@
       column-width: 600px;
       text-overflow: ellipsis;
       overflow: hidden;
+    }
+
+    span {
+      display: none;
+    }
+
+    em {
+      display: inline;
     }
 
     &::after {
