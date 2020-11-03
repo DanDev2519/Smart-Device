@@ -210,21 +210,21 @@
               <legend class="visually-hidden">Поля для задания вопроса</legend>
               <ul class="question__list">
                 <li class="question__item">
-                  <label class="question__label" for="name"></label>
-                  <input class="question__input" type="text" name="name" id="name" placeholder="Имя" required="">
+                  <label for="name"></label>
+                  <input type="text" name="name" id="name" placeholder="Имя" required="">
                 </li>
                 <li class="question__item">
-                  <label class="question__label" for="tel"></label>
-                  <input class="question__input" type="tel" name="tel" id="tel" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
+                  <label for="tel"></label>
+                  <input type="tel" name="tel" id="tel" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
                 </li>
               </ul>
               <textarea class="question__textarea" name="comment" id="comment" cols="53" rows="5" placeholder="Ваш вопрос"></textarea>
             </fieldset>
             <div class="question__bottom">
               <button class="btn question__button" type="submit">Задать вопрос</button>
-              <input class="question__input visually-hidden" type="checkbox" name="consent" id="consent" checked="" required="">
-              <label class="question__label question__label--checkbox" for="consent">Я согласен на обработку
-                персональных данных</label>
+              <input class="visually-hidden" type="checkbox" name="consent" id="consent" checked="" required="">
+              <label for="consent">
+                Я согласен на обработку персональных данных</label>
             </div>
           </form>
         </article>
@@ -312,20 +312,20 @@
           <legend class="visually-hidden">Поля для задания вопроса</legend>
           <ul class="question__list">
             <li class="question__item">
-              <label class="question__label" for="name-popup"></label>
-              <input class="question__input" type="text" name="name" id="name-popup" placeholder="Имя" required="">
+              <label for="name-popup"></label>
+              <input type="text" name="name" id="name-popup" placeholder="Имя" required="">
             </li>
             <li class="question__item">
-              <label class="question__label" for="tel-popup"></label>
-              <input class="question__input" type="tel" name="tel" id="tel-popup" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
+              <label for="tel-popup"></label>
+              <input type="tel" name="tel" id="tel-popup" placeholder="Телефон" pattern="(\+?\d[- .]*){11}" required="">
             </li>
           </ul>
           <textarea class="question__textarea" name="comment" id="comment-popup" cols="53" rows="5" placeholder="Ваш вопрос"></textarea>
         </fieldset>
         <div class="question__bottom">
           <button class="btn question__button" type="submit">Отправить</button>
-          <input class="question__input visually-hidden" type="checkbox" name="consent" id="consent-popup" checked="" required="">
-          <label class="question__label question__label--checkbox" for="consent-popup">Я согласен на обработку
+          <input class="visually-hidden" type="checkbox" name="consent" id="consent-popup" checked="" required="">
+          <label for="consent-popup">Я согласен на обработку
             персональных данных</label>
         </div>
       </form>

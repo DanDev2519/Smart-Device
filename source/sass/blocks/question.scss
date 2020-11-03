@@ -15,6 +15,33 @@
 
 .question__form {
   margin: 0 0 0 5px;
+
+  label {
+    position: relative;
+    display: block;
+  }
+
+  input,
+  textarea {
+    padding: 14px 16px;
+    width: 270px;
+
+    @include setFont(16px, 22px, normal);
+    font-family: $ptm;
+    color: $dark-blue;
+
+    background: $blue-light;
+    border: none;
+
+    &::placeholder {
+      color: $white;
+    }
+  }
+
+  textarea {
+    @include size(570px, 154px);
+    resize: vertical;
+  }
 }
 
 .question__group {
@@ -32,11 +59,16 @@
   @include list(20px 0 40px);
 }
 
-.question__label {
+.question__bottom {
   position: relative;
-  display: block;
 
-  &--checkbox {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 40px 0;
+
+  label {
     cursor: pointer;
 
     padding: 0 0 0 32px;
@@ -65,50 +97,23 @@
       text-decoration: underline;
     }
   }
-}
 
-.question__input {
-  &:focus + .question__label::before {
-    outline: $white solid 2px;
+  input {
+    top: 60px;
+    left: 315px;
+
+    &:focus + label::before {
+      outline: $white solid 2px;
+    }
+
+    &:checked + label::after {
+      @include pseudo();
+      @include size(9px, 6px);
+      @include bgimg(transparent, url("../img/icon-check.svg"));
+      top: 7px;
+      left: 2px;
+    }
   }
-
-  &:checked + .question__label--checkbox::after {
-    @include pseudo();
-    @include size(9px, 6px);
-    @include bgimg(transparent, url("../img/icon-check.svg"));
-    top: 7px;
-    left: 2px;
-  }
-}
-
-.question__input,
-.question__textarea {
-  padding: 14px 16px;
-  width: 270px;
-
-  @include setFont(16px, 22px, normal);
-  font-family: $ptm;
-  color: $dark-blue;
-
-  background: rgba($white, 0.1);
-  border: none;
-
-  &::placeholder {
-    color: $white;
-  }
-}
-
-.question__textarea {
-  @include size(570px, 154px);
-  resize: vertical;
-}
-
-.question__bottom {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  padding: 40px 0;
 }
 
 .question__button {
@@ -126,6 +131,16 @@
 
   .question__form {
     margin: 0;
+
+    input,
+    textarea {
+      padding: 14px 25px;
+      width: 412px;
+    }
+
+    textarea {
+      height: 104px;
+    }
   }
 
   .question__list {
@@ -137,25 +152,18 @@
     padding: 16px 0;
   }
 
-  .question__label {
-    &--checkbox {
+  .question__bottom {
+    padding: 25px 0;
+
+    label {
       padding: 0 0 0 47px;
       width: 340px;
     }
-  }
 
-  .question__input,
-  .question__textarea {
-    padding: 14px 25px;
-    width: 412px;
-  }
-
-  .question__textarea {
-    height: 104px;
-  }
-
-  .question__bottom {
-    padding: 25px 0;
+    input {
+      top: 120px;
+      left: -48px;
+    }
   }
 
   .question__button {
@@ -176,27 +184,32 @@
     }
   }
 
+  .question__form {
+    input,
+    textarea {
+      width: 279px;
+    }
+
+    textarea {
+      @include size(590px, 160px);
+    }
+  }
+
   .question__list {
     padding: 25px 0 43px;
   }
 
-  .question__label {
-    &--checkbox {
-      padding: 0 8px 0 32px;
-    }
-  }
-
-  .question__input,
-  .question__textarea {
-    width: 279px;
-  }
-
-  .question__textarea {
-    @include size(590px, 160px);
-  }
-
   .question__bottom {
     padding: 42px 0;
+
+    label {
+      padding: 0 8px 0 32px;
+    }
+
+    input {
+      top: 60px;
+      left: 325px;
+    }
   }
 
   .question__button {
@@ -217,6 +230,17 @@
 
   .question__form {
     margin: 0;
+
+    input,
+    textarea {
+      padding: 12px 16px 17px;
+      width: 100%;
+    }
+
+    textarea {
+      @include size(100%, 104px);
+      margin-top: 17px;
+    }
   }
 
   .question__list {
@@ -228,8 +252,13 @@
     padding: 15px 0;
   }
 
-  .question__label {
-    &--checkbox {
+
+  .question__bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 27px 0;
+
+    label {
       padding: 0 13px 0 34px;
       margin-top: 31px;
       width: 85%;
@@ -238,29 +267,15 @@
         left: 0;
       }
     }
-  }
 
-  .question__input {
-    &:checked + .question__label--checkbox::after {
-      left: 4px;
+    input {
+      top: 115px;
+      left: 8px;
+
+      &:checked + label::after {
+        left: 4px;
+      }
     }
-  }
-
-  .question__input,
-  .question__textarea {
-    padding: 12px 16px 17px;
-    width: 100%;
-  }
-
-  .question__textarea {
-    @include size(100%, 104px);
-    margin-top: 17px;
-  }
-
-  .question__bottom {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 27px 0;
   }
 
   .question__button {
