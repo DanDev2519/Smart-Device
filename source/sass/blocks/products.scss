@@ -19,11 +19,11 @@
   justify-content: center;
 
   @include list(0);
-  margin: 0 -15px;
+  margin: -15px;
 }
 
 .products__item {
-  margin: 0 15px;
+  margin: 15px;
 }
 
 .products__link {
