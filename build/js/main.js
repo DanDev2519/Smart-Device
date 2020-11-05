@@ -94,7 +94,7 @@ if (writeLink) {
     if (!writeName.value || !writeTel.value || !writeLetter.value) {
       evt.preventDefault();
       writePopup.classList.remove('modal--error');
-      writePopup.offsetWidth = writePopup.offsetWidth;
+      writePopup.style.width = writePopup.offsetWidth;
       writePopup.classList.add('modal--error');
     } else {
       if (isStorageSupport) {
