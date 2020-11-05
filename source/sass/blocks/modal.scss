@@ -1,3 +1,43 @@
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, -200%);
+  }
+
+  70% {
+    transform: translate(-50%, -47%);
+  }
+
+  90% {
+    transform: translate(-50%, -53%);
+  }
+
+  100% {
+    transform: translate(-50%, -50%);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%);
+  }
+
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translate(-48%, -50%);
+  }
+
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translate(-52%, -50%);
+  }
+}
+
 .modal {
   position: fixed;
   top: 40.4%;
@@ -11,7 +51,7 @@
 
   &--show {
     display: block;
-    animation: bounce 6s;
+    animation: bounce 0.5s;
   }
 
   &--error {
