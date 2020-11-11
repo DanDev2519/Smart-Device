@@ -91,7 +91,7 @@ if (writeLink) {
   });
 
   writeForm.addEventListener('submit', function (evt) {
-    if (!writeName.value || !writeTel.value || !writeLetter.value) {
+    if (!writeName.value || !writeTel.value) {
       evt.preventDefault();
       writePopup.classList.remove('modal--error');
       writePopup.style.width = writePopup.offsetWidth;

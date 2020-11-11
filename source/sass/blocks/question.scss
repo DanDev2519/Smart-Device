@@ -32,6 +32,7 @@
 
     background: $blue-light;
     border: none;
+    border-radius: 0;
 
     &::placeholder {
       color: $white;

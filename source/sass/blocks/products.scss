@@ -54,6 +54,12 @@
     right: 0;
     background-color: $blue;
   }
+
+  &:hover {
+    h3 {
+      text-decoration: underline;
+    }
+  }
 }
 
 @media #{$tablet-only} {

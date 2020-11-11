@@ -83,6 +83,11 @@
   transform-origin: left bottom 0;
   transform: rotate(180deg) translate(-23px, 13px);
   writing-mode: tb-rl;
+
+  &:hover,
+  &:focus {
+    color: $blue;
+  }
 }
 
 @media #{$tablet-only} {
