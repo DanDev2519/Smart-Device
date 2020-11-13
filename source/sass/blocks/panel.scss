@@ -38,5 +38,6 @@
 
   .panel__item--opened .panel__body {
     display: flex;
+    flex-direction: column;
   }
 }

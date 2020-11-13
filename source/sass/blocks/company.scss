@@ -4,6 +4,7 @@
     url("../img/triangles-desktop@1x.png"),
     $position: bottom 64% right 8.7%
     );
+  background-size: 2243px 1347px;
 
   @media #{$retina} {
     background-image: url("../img/triangles-desktop@2x.png");
@@ -17,6 +18,8 @@
       url("../img/triangle-tablet@1x.png"),
       $position: bottom 62.5% right 307%
       );
+    background-size: 872px 873px;
+
 
     @media #{$retina} {
       background-image: url("../img/triangle-tablet@2x.png");

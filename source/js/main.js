@@ -7,9 +7,10 @@ var KeyCode = {
 // Аккордеон
 var panel = document.querySelector('.panel');
 var panelItems = panel.querySelectorAll('.panel__item');
+var panelItemsArray = Array.prototype.slice.call(panelItems);
 var activePanel;
 
-panelItems.forEach(function (item) {
+panelItemsArray.forEach(function (item) {
   item.classList.remove('panel__item--opened');
   item.classList.add('panel__item--closed');
 
@@ -115,8 +116,9 @@ if (writeLink) {
 
 // Плавная прокрутка
 var anchors = document.querySelectorAll('a.scroll-to');
+var anchorsArray = Array.prototype.slice.call(anchors);
 
-anchors.forEach(function (anchor) {
+anchorsArray.forEach(function (anchor) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault();
 
@@ -132,8 +134,9 @@ anchors.forEach(function (anchor) {
 
 // Поле ввода телефона
 var inputTels = document.querySelectorAll('input[type="tel"]');
+var inputTelsArray = Array.prototype.slice.call(inputTels);
 
-inputTels.forEach(function (input) {
+inputTelsArray.forEach(function (input) {
   input.onfocus = function () {
     if (this.value === '') {
       this.value = '+7(';

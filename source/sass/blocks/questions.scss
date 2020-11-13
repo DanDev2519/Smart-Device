@@ -4,6 +4,7 @@
     url("../img/bgimg-form-desktop@1x.png"),
     $position: bottom 37% left 175px
   );
+  background-size: 1891px 765px;
 
   @media #{$retina} {
     background-image: url("../img/bgimg-form-desktop@2x.png");
