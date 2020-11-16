@@ -20,11 +20,12 @@
   justify-content: space-between;
   align-items: top;
   flex-wrap: wrap;
-  padding: 65px 10px 5px;
+  // padding: 65px 10px 5px;
+  padding: 65px 0 5px;
 }
 
 .footer__left {
-  padding: 0;
+  padding: 0 10px;
 
 
   img {
@@ -70,6 +71,11 @@
     letter-spacing: 0.05em;
     text-transform: uppercase;
   }
+}
+
+.footer__right-first,
+.footer__right-second {
+  padding: 0 10px;
 }
 
 .footer__list-wrapper {
@@ -167,8 +173,9 @@
     flex-grow: 0;
   }
 
-  .footer__right-first {
-    min-width: auto;
+  .footer__right-first,
+  .footer__right-second {
+    padding: 0;
   }
 
   .footer__list-wrapper {
