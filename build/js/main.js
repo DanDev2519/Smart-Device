@@ -133,25 +133,38 @@ anchorsArray.forEach(function (anchor) {
 
 
 // Поле ввода телефона
+// var inputTels = document.querySelectorAll('input[type="tel"]');
+// var inputTelsArray = Array.prototype.slice.call(inputTels);
+
+// inputTelsArray.forEach(function (input) {
+//   input.onfocus = function () {
+//     if (this.value === '') {
+//       this.value = '+7(';
+//     }
+//   };
+
+//   input.onblur = function () {
+//     if (this.value === '+7(') {
+//       this.value = '';
+//     }
+//   };
+
+//   input.oninput = function () {
+//     if (this.value.length === 6 && !this.value.includes(')')) {
+//       this.value += ')';
+//     }
+//   };
+// });
+
+// import IMask from 'imask';
+
 var inputTels = document.querySelectorAll('input[type="tel"]');
 var inputTelsArray = Array.prototype.slice.call(inputTels);
 
+var maskOptions = {
+  mask: '+{7}(000)000-00-00'
+};
+// var masks = IMask(inputTelsArray[0], maskOptions);
 inputTelsArray.forEach(function (input) {
-  input.onfocus = function () {
-    if (this.value === '') {
-      this.value = '+7(';
-    }
-  };
-
-  input.onblur = function () {
-    if (this.value === '+7(') {
-      this.value = '';
-    }
-  };
-
-  input.oninput = function () {
-    if (this.value.length === 6 && !this.value.includes(')')) {
-      this.value += ')';
-    }
-  };
+  IMask(input, maskOptions);
 });
