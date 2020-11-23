@@ -1,10 +1,20 @@
-import IMask from 'imask';
-
 'use strict';
 
 var KeyCode = {
   ESC: 27,
 };
+
+// Поле ввода телефона
+var inputTels = document.querySelectorAll('input[type="tel"]');
+var inputTelsArray = Array.prototype.slice.call(inputTels);
+
+var maskOptions = {
+  mask: '+{7}(000)000-00-00',
+};
+
+inputTelsArray.forEach(function (input) {
+  IMask(input, maskOptions);
+});
 
 // Аккордеон
 var panel = document.querySelector('.panel');
@@ -24,7 +34,7 @@ panelItemsArray.forEach(function (item) {
       activePanel.classList.add('panel__item--closed');
       activePanel.classList.remove('panel__item--opened');
     }
-    activePanel = (activePanel === item) ? 0 : item;
+    activePanel = activePanel === item ? 0 : item;
   });
 });
 
@@ -128,43 +138,7 @@ anchorsArray.forEach(function (anchor) {
 
     document.querySelector(blockID).scrollIntoView({
       behavior: 'smooth',
-      block: 'start'
+      block: 'start',
     });
   });
-});
-
-
-// Поле ввода телефона
-// var inputTels = document.querySelectorAll('input[type="tel"]');
-// var inputTelsArray = Array.prototype.slice.call(inputTels);
-
-// inputTelsArray.forEach(function (input) {
-//   input.onfocus = function () {
-//     if (this.value === '') {
-//       this.value = '+7(';
-//     }
-//   };
-
-//   input.onblur = function () {
-//     if (this.value === '+7(') {
-//       this.value = '';
-//     }
-//   };
-
-//   input.oninput = function () {
-//     if (this.value.length === 6 && !this.value.includes(')')) {
-//       this.value += ')';
-//     }
-//   };
-// });
-
-var inputTels = document.querySelectorAll('input[type="tel"]');
-var inputTelsArray = Array.prototype.slice.call(inputTels);
-
-var maskOptions = {
-  mask: '+{7}(000)000-00-00'
-};
-
-inputTelsArray.forEach(function (input) {
-  IMask(input, maskOptions);
 });
